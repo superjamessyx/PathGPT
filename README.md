@@ -9,11 +9,13 @@
 
 ## ChatPath: A Knowledgeable Llama-based Chat Model for Pathology
 
-This is a repository for ChatPath. ChatPath is a pathology-specific language model developed by fine-tuning Llama-7B on a dataset of 13k pathology-specific questions and answers that we have collected. We have released the checkpoint for ChatPath (weight diff of Llama), and we will release the 13k pathology dataset within a week. Moreover, we plan to expand the dataset to over 50,000 in the future. We believe that ChatPath will be an invaluable resource for pathologists and the pathology community.
+Welcome to the ChatPath repository! ChatPath is a specialized language model tailored for the field of pathology. Developed by fine-tuning the Llama-7B model using a dataset of 13,000 pathology-specific questions and answers we've collected. We're excited to announce the release of the ChatPath checkpoint (the weight diff of Llama), with the full 13k dataset to follow shortly.  The detailed data collection process will also be made public.
+
+But we're not stopping there! In the future, we plan to expand the dataset to over 100,000 entries, encompassing a diverse range of pathology-related instruction data. We believe that ChatPath will become an valuable tool for pathologists and the entire pathology community.
 
 ### **Authors**
 
-This project was completed by **Yuxuan Sun** and **Chenglu Zhu** from the Artificial Intelligence and **Biomedical Image Analysis Lab** of the School of Engineering at Westlake University. We would like to thank **Kai Zhang** (Ohio State University) for participating in the discussion and collaboration, as well as the following individuals who contributed to the annotation process: **Xinheng Lv and Ruojia Zhao**.
+This project was completed by **Yuxuan Sun** and **Chenglu Zhu** from the **Artificial Intelligence and Biomedical Image Analysis Lab** of the School of Engineering at Westlake University. We would like to thank **Kai Zhang** (Ohio State University) for participating in the discussion and collaboration, as well as the following individuals who contributed to the annotation process: **Xinheng Lv** and **Ruojia Zhao**.
 
 
 <h2 id="usage">Usage</h2>
@@ -34,7 +36,7 @@ pip install -r requirements.txt
 
 - Training data 
 
-  Considering that our current data collection is restricted to pathology-related QA pairs, concentrating exclusively on QA training could impede ChatPath's efficacy in performing other tasks. To overcome this constraint, we have merged data from Stanford's [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html) project with our own, yielding a diverse and extensive dataset comprising 65,000 training instances for ChatPath.
+  Taking into account that our present data collection focuses solely on pathology-related QA pairs, an exclusive emphasis on QA training may hinder ChatPath's ability to effectively carry out other tasks. To address this limitation, we initially fine-tune the model using Stanford [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html) data, followed by further fine-tuning with our pathology-specific data. This approach enables ChatPath to adeptly handle a diverse range of questioning styles.
 ```bash
 ChatPath/src/data/pathology_alpaca.json
 ```
@@ -110,7 +112,7 @@ Training 7B model with `13k examples/ 3 epoch` & `batch_size=64` within `1 hour`
 
 | LLaMA | Batch Size | A100s | Time (h) |
 | ----- | ---------- | ----- | -------- |
-| 7 B   | 32         | 4     | 4.50     |
+| 7 B   | 32         | 4     | 1        |
 
 
 - Inference
@@ -118,6 +120,42 @@ Training 7B model with `13k examples/ 3 epoch` & `batch_size=64` within `1 hour`
 # web demo inference
 python generate.py
 ```
+
+## Download fine-tuned checkpoint
+
+We have released the weight difference （[OneDrive](https://westlakeu-my.sharepoint.com/:f:/g/personal/sunyuxuan_westlake_edu_cn/Eu9FjALk1NFEpv7RwOG-wwIBYf83RAvrXm3u-V97lkeNpw?e=AFHcvi), uploading） between the finetuned weights and the original llama weights. By simply adding this difference to the latter, you can obtain the finetuned weights.
+
+## Example outputs
+
+*How to distinguish the distribution pattern of immune cells in solid tumors of H&E staining images?*
+
+**Alpaca**
+
+The distribution pattern of immune cells in solid tumors can be determined by examining H&E stained slides. Immunohistochemical stains such as CD3, CD8, CD4, and CD20 can be used to identify T-cells, B-cells, and antigen-presenting cells, respectively. Additionally, macrophages can be identified with CD68 staining.</s>
+
+**ChatPath**
+
+To distinguish the distribution pattern of immune cells in solid tumors of H&E staining images, the following steps can be followed:
+
+1. Select the area of interest in the H&E staining image.
+
+2. Identify the location of immune cells in the selected area.
+
+3. Count the number of immune cells in the selected area.
+
+4. Calculate the percentage of immune cells in the selected area.
+
+5. Compare the percentage of immune cells in the selected area with the percentage of immune cells in normal tissues.
+
+6. Analyze the distribution pattern of immune cells in the selected area.
+
+7. Compare the distribution pattern of immune cells in the selected area with the distribution pattern of immune cells in normal tissues.
+
+8. Evaluate the significance of the distribution pattern of immune cells in the selected area.
+
+By following these steps, it is possible to distinguish the distribution pattern of immune cells in solid tumors of H&E staining images.</s>
+
+
 
 
 
