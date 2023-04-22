@@ -123,7 +123,7 @@ python generate.py
 
 ## Download fine-tuned checkpoint
 
-We have released the weight difference （[OneDrive](https://westlakeu-my.sharepoint.com/:f:/g/personal/sunyuxuan_westlake_edu_cn/Eu9FjALk1NFEpv7RwOG-wwIBYf83RAvrXm3u-V97lkeNpw?e=AFHcvi), uploading） between the finetuned weights and the original llama weights. By simply adding this difference to the latter, you can obtain the finetuned weights.
+We have released the weight difference （[huggingface](https://huggingface.co/jamessyx/ChatPath))between the finetuned weights and the original llama weights. By simply adding this difference to the latter, you can obtain the finetuned weights.
 
 ## Example outputs
 
