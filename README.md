@@ -13,7 +13,7 @@ This is a repository for ChatPath. ChatPath is a pathology-specific language mod
 
 ### **Authors**
 
-This project was completed by **Yuxuan Sun** and **Chenglu Zhu** from the Artificial Intelligence and **Biomedical Image Analysis Lab** of the School of Engineering at Westlake University. We would like to thank **Kai Zhang **(Ohio State University) for participating in the discussion and collaboration, as well as the following individuals who contributed to the annotation process: **Xinheng Lv and Ruojia Zhao**.
+This project was completed by **Yuxuan Sun** and **Chenglu Zhu** from the Artificial Intelligence and **Biomedical Image Analysis Lab** of the School of Engineering at Westlake University. We would like to thank **Kai Zhang** (Ohio State University) for participating in the discussion and collaboration, as well as the following individuals who contributed to the annotation process: **Xinheng Lv and Ruojia Zhao**.
 
 
 <h2 id="usage">Usage</h2>
