@@ -108,7 +108,7 @@ deepspeed --num_gpus num_of_gpus_in_each_node \
 
 - Training Cost
 
-Training 7B model with `13k examples/ 3 epoch` & `batch_size=64` within `1 hour` on `4 x A100 GPUs`.
+Training 7B model with `13k examples/ 3 epoch` & `batch_size=32` within `1 hour` on `4 x A100 GPUs`.
 
 | LLaMA | Batch Size | A100s | Time (h) |
 | ----- | ---------- | ----- | -------- |
