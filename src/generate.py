@@ -95,7 +95,7 @@ def main(
         fn=evaluate,
         inputs=[
             gr.components.Textbox(
-                lines=2, label="Instruction", placeholder="Tell me about alpacas."
+                lines=2, label="Instruction", placeholder="For pathology questions, you can use: In a genuine and professional manner, please assume the role of a pathologist and respond to the provided questions."
             ),
             gr.components.Textbox(lines=2, label="Input", placeholder="none"),
             gr.components.Slider(minimum=0, maximum=1, value=0.1, label="Temperature"),
@@ -115,7 +115,7 @@ def main(
             )
         ],
         title="ChatPath",
-        description="Improve LLaMA model to follow instructions.",
+        description="A knowledgeable Llama-based Chat Model for Pathology.",
     ).launch(share=True)
 
 
