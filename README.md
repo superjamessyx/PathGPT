@@ -18,6 +18,16 @@ But we're not stopping there! In the future, we plan to expand the dataset to ov
 This project was completed by **Yuxuan Sun** and **Chenglu Zhu** from the **Artificial Intelligence and Biomedical Image Analysis Lab** of the School of Engineering at Westlake University. We would like to thank **Kai Zhang** (Ohio State University) for participating in the discussion and collaboration, as well as the following individuals who contributed to the annotation process: **Xinheng Lv** and **Ruojia Zhao**.
 
 
+
+## Get your demo experience!!
+
+We deployed ChatPath on the A100 server and opened it up for user experience.  You can follow the instruction illustrated  below.  The demo webset is: https://045d57c08b6cc9b8.gradio.app.  Please feel free to point out the problems our model.
+
+<p align="center" width="100%">
+<a ><img src="src/imgs/instruction.png" alt="Llama-X" style="width: 100%; min-width: 300px; display: block; margin: auto;"></a>
+</p>
+
+
 <h2 id="usage">Usage</h2>
 
 - Setup. Install the conda environment:
