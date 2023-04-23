@@ -22,7 +22,7 @@ This project was completed by **Yuxuan Sun** and **Chenglu Zhu** from the **Arti
 
 ## Get your demo experience!!
 
-We deployed ChatPath on the A100 server and opened it up for user experience.  You can follow the instruction illustrated  below.  The demo webset is: https://045d57c08b6cc9b8.gradio.app.  Please feel free to point out the problems our model.
+We deployed ChatPath on the A100 server and opened it up for user experience.  You can follow the instruction illustrated  below.  The demo webset is: https://2547ac6bdf6e75fc.gradio.app.  Please feel free to point out the problems our model.
 
 <p align="center" width="100%">
 <a ><img src="src/imgs/instruction.png" alt="ChatPath" style="width: 100%; min-width: 300px; display: block; margin: auto;"></a>
