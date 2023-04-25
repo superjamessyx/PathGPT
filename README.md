@@ -1,5 +1,5 @@
 <p align="center" width="100%">
-<a ><img src="src/imgs/chatpath_logo.png" alt="ChatPath" style="width: 60%; min-width: 300px; display: block; margin: auto;"></a>
+<a ><img src="src/imgs/pathgpt_logo.png" alt="ChatPath" style="width: 60%; min-width: 300px; display: block; margin: auto;"></a>
 </p>
 
 
@@ -8,11 +8,11 @@
 [![Code License](https://img.shields.io/badge/Code%20License-Apache_2.0-green.svg)](https://github.com/tatsu-lab/stanford_alpaca/blob/main/LICENSE)
 [![Data License](https://img.shields.io/badge/Data%20License-CC%20By%20NC%204.0-red.svg)](https://github.com/tatsu-lab/stanford_alpaca/blob/main/DATA_LICENSE)
 
-## ChatPath: A Knowledgeable Llama-based Chat Model for Pathology
+## PathGPT: A Knowledgeable GPT Model for Pathology
 
-Welcome to the ChatPath repository! ChatPath is a specialized language model tailored for the field of pathology. Developed by fine-tuning the Llama-7B model using a dataset of 13,000 pathology-specific questions and answers we've collected. We're excited to announce the release of the ChatPath checkpoint (the weight diff of Llama), with the full 13k dataset to follow shortly.  The detailed data collection process will also be made public.
+Welcome to the PathGPT repository! PathGPT is a specialized language model tailored for the field of pathology. Developed by fine-tuning the Llama-7B model using a dataset of 13,000 pathology-specific questions and answers we've collected. We're excited to announce the release of the PathGPT checkpoint (the weight diff of Llama), with the full 13k dataset to follow shortly.  The detailed data collection process will also be made public.
 
-But we're not stopping there! In the future, we plan to expand the dataset to over 100,000 entries, encompassing a diverse range of pathology-related instruction data. We believe that ChatPath will become an valuable tool for pathologists and the entire pathology community.
+But we're not stopping there! In the future, we plan to expand the dataset to over 100,000 entries, encompassing a diverse range of pathology-related instruction data. We believe that PathGPT will become an valuable tool for pathologists and the entire pathology community.
 
 ### **Authors**
 
@@ -22,7 +22,7 @@ This project was completed by **Yuxuan Sun** and **Chenglu Zhu** from the **Arti
 
 ## Get your demo experience!!
 
-We deployed ChatPath on the A100 server and opened it up for user experience.  You can follow the instruction illustrated  below.  The demo webset is: https://776628862fb9bcae.gradio.app.  Please feel free to point out the problems our model.
+We deployed PathGPT on the A100 server and opened it up for user experience.  You can follow the instruction illustrated  below.  The demo webset is: https://776628862fb9bcae.gradio.app.  Please feel free to point out the problems our model.
 
 <p align="center" width="100%">
 <a ><img src="src/imgs/instruction.png" alt="ChatPath" style="width: 100%; min-width: 300px; display: block; margin: auto;"></a>
@@ -33,10 +33,10 @@ We deployed ChatPath on the A100 server and opened it up for user experience.  Y
 
 - Setup. Install the conda environment:
 ```bash
-conda create -n chatpath python=3.10
-conda activate chatpath
-git clone https://github.com/superjamessyx/ChatPath.git
-cd ChatPath/src
+conda create -n pathgpt  python=3.10
+conda activate pathgpt
+git clone https://github.com/superjamessyx/PathGPT.git
+cd PathGPT/src
 conda install pytorch==1.12.0 torchvision==0.13.0 torchaudio==0.12.0 cudatoolkit=11.3 -c pytorch
 git clone https://github.com/huggingface/transformers.git
 cd transformers
@@ -47,14 +47,14 @@ pip install -r requirements.txt
 
 - Training data 
 
-  Taking into account that our present data collection focuses solely on pathology-related QA pairs, an exclusive emphasis on QA training may hinder ChatPath's ability to effectively carry out other tasks. To address this limitation, we initially fine-tune the model using Stanford [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html) data, followed by further fine-tuning with our pathology-specific data. This approach enables ChatPath to adeptly handle a diverse range of questioning styles.
+  Taking into account that our present data collection focuses solely on pathology-related QA pairs, an exclusive emphasis on QA training may hinder PathGPT's ability to effectively carry out other tasks. To address this limitation, we initially fine-tune the model using Stanford [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html) data, followed by further fine-tuning with our pathology-specific data. This approach enables PathGPT to adeptly handle a diverse range of questioning styles.
 ```bash
-ChatPath/src/data/pathology_alpaca.json
+PathGPT/src/data/pathology_alpaca.json
 ```
 
 - Convert LLaMA checkpoint to HuggingFace format:
 ```bash
-cd ChatPath/src
+cd PathGPT/src
 python transformers/src/transformers/models/llama/convert_llama_weights_to_hf.py \
     --input_dir /path/to/llama-7B/ \
     --model_size 7B \
@@ -144,7 +144,7 @@ We have released the weight difference ([huggingface](https://huggingface.co/jam
 
 The distribution pattern of immune cells in solid tumors can be determined by examining H&E stained slides. Immunohistochemical stains such as CD3, CD8, CD4, and CD20 can be used to identify T-cells, B-cells, and antigen-presenting cells, respectively. Additionally, macrophages can be identified with CD68 staining.</s>
 
-**ChatPath**
+**PathGPT**
 
 To distinguish the distribution pattern of immune cells in solid tumors of H&E staining images, the following steps can be followed:
 
@@ -188,7 +188,7 @@ and also relate to multiple open source projects:
 
 ## Disclaimer
 
-The use of resources(e.g., code, data and model weights) related to this project is limited to academic research and is prohibited for commercial purposes. The content generated by ChatPath is subject to factors such as randomness and uncontrollability, and this project cannot guarantee its accuracy. This project does not assume any legal responsibility for the content of the model output, nor does it assume any responsibility for any losses that may arise from the use of related resources and output results.
+The use of resources(e.g., code, data and model weights) related to this project is limited to academic research and is prohibited for commercial purposes. The content generated by PathGPT is subject to factors such as randomness and uncontrollability, and this project cannot guarantee its accuracy. This project does not assume any legal responsibility for the content of the model output, nor does it assume any responsibility for any losses that may arise from the use of related resources and output results.
 
 
 
