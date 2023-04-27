@@ -23,7 +23,7 @@ This project was completed by **Yuxuan Sun** and **Chenglu Zhu** from the **Arti
 
 ## Get your demo experience!!
 
-We deployed PathGPT on the A100 server and opened it up for user experience.  You can follow the instruction illustrated  below.  The demo webset is: https://dabee399f08411fb.gradio.app.  Please feel free to point out the problems our model.
+We deployed PathGPT on the A100 server and opened it up for user experience.  You can follow the instruction illustrated  below.  The demo webset is: https://f86fb98a1b7bbd2a.gradio.app.  Please feel free to point out the problems our model.
 
 <p align="center" width="100%">
 <a ><img src="src/imgs/pathgpt_instruction.png" alt="ChatPath" style="width: 100%; min-width: 300px; display: block; margin: auto;"></a>
