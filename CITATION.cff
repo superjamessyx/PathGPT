@@ -1,0 +1,21 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: 'PathGPT: A Knowledgeable GPT Model for Pathology'
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Yuxuan
+    family-names: Sun
+    email: sunyuxuan@westlake.edu.cn
+    name-particle: YUXUAN
+repository-code: 'https://github.com/superjamessyx/PathGPT'
+abstract: >-
+  PathGPT is a specialized language model tailored for the
+  field of pathology. Developed by fine-tuning the Llama-7B
+  model using a dataset of 13,000 pathology-specific
+  questions and answers we've collected. 
+license: Apache-2.0
