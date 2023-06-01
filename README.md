@@ -11,7 +11,11 @@
 
 ## PathGPT: A Knowledgeable GPT Model for Pathology
 
-Welcome to the PathGPT repository! PathGPT is a specialized language model tailored for the field of pathology. Developed by fine-tuning the Llama-7B model using a dataset of 13,000 pathology-specific questions and answers we've collected. We're excited to announce the release of the PathGPT checkpoint (the weight diff of Llama), with the full 13k dataset to follow shortly.  The detailed data collection process will also be made public.
+Welcome to the PathGPT repository! PathGPT is a specialized language model tailored for the field of pathology. Developed by fine-tuning the Llama-7B model using a dataset of 13,000 pathology-specific questions and answers we've collected. We're excited to announce the release of the PathGPT checkpoint (the weight diff of Llama), with the full 13k dataset to follow shortly.   The detailed data processing process is as follows:
+
+<p align="center" width="100%">
+<a ><img src="src/imgs/data_process.png" alt="ChatPath" style="width: 80%; min-width: 300px; display: block; margin: auto;"></a>
+</p>
 
 But we're not stopping there! In the future, we plan to expand the dataset to over 100,000 entries, encompassing a diverse range of pathology-related instruction data. We believe that PathGPT will become an valuable tool for pathologists and the entire pathology community.
 

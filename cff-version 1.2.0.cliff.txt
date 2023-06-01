@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Yuxuan"
+  given-names: "Sun"
+- family-names: "Chenglu"
+  given-names: "Zhu"
+title: "PathGPT: A Knowledgeable GPT Model for Pathology"
+version: 1.0.0
+date-released: 2023-4-22
+url: "https://github.com/superjamessyx/PathGPT"
+
+
+
+
+然而，需要注意的是，PubMed等scientific paper中包含的image-text pair往往较短，yielding a narrow perspective of pathological images instead of a comprehensive analysis of all discernible content. This constraint limits the capability of trained models to provide detailed and accurate descriptions of the images, resulting in typically brief responses，因此，我们需要花费了大量人力去收集来自于书籍、病理图谱或者人为标注来解决。当然，与此同时，研究如何自动化的正确的扩充scientific paper中的caption 详细程度也显得十分重要
+
+
+
+However, it's important to note that caption of the image in scientific papers often quite succinct, yielding a narrow description of pathological images instead of a comprehensive analysis of all discernible content. This limitation constrains the capacity of trained models to provide detailed descriptions of the images. Therefore, we have invested considerable effort in collating data from books, pathology atlases, and manual annotations to rectify this issue. Simultaneously, researching how to automatically and correctly augment the details of the captions within scientific papers is of utmost importance.
+
+
+Nevertheless, it's important to note that captions accompanying images in scientific papers are frequently succinct, offering a limited interpretation of pathological images, rather than an exhaustive analysis of all identifiable content. This constrains  the ability of models to furnish intricate descriptions of the images. In response to this, we've dedicated a significant effort to collate data from various sources, such as books, pathology atlases, and manual annotations to address this issue. Moreover, it is highly worthwhile to explore appropriate approaches to augment the level of detail in image captions within scientific papers. 
+
+
+python -m training.main \
+    --save-frequency 1 \
+    --zeroshot-frequency 1 \
+    --report-to wandb \
+    --train-data="/data1/syx/dataset/Final_project_data/train/pathclip.csv"  \
+    --csv-img-key img \
+    --csv-caption-key caption \
+    --warmup 10000 \
+    --batch-size=128 \
+    --pretrained=openai \
+    --lr=1e-3 \
+    --wd=0.1 \
+    --epochs=30 \
+    --workers=8 \
+    --model openai/clip-vit-base-patch16
